@@ -20,13 +20,10 @@ while True:
         seconds = '00'
         intsecs = 0
         intmins += 1
-        if intmins < 10:
-            minutes = '0' + str(intmins)
-        else:
-            minutes = str(intmins)
+        minutes = f'0{intmins}' if intmins < 10 else str(intmins)
     elif intsecs < 9:
         intsecs += 1
-        seconds = '0' + str(intsecs)
+        seconds = f'0{intsecs}'
     else:
         intsecs += 1
         seconds = str(intsecs)
@@ -35,11 +32,7 @@ while True:
         minutes = '00'
         intmins = 0
         inthrs += 1
-        if inthrs < 10:
-            hours = '0' + str(inthrs)
-        else:
-            hours = str(inthrs)
-
+        hours = f'0{inthrs}' if inthrs < 10 else str(inthrs)
     if inthrs == 24:
         hours = '00'
         inthrs = 0
